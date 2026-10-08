@@ -1,0 +1,48 @@
+{
+  "clubs_count": 0,
+  "clubs_sample": [],
+  "positions_found": [
+    "Defensor",
+    "Central"
+  ],
+  "decisions_sample": [
+    "Intensa",
+    "Normal",
+    "Exprés",
+    "Rey de América",
+    "Leyenda del club",
+    "Dueño de Europa",
+    "Mr. Champions",
+    "GOAT",
+    "Só o Pelé",
+    "Araña Negra",
+    "Terror de las redes",
+    "Completar el fútbol",
+    "El más ganador de la historia",
+    "Ringless",
+    "Héroe nacional",
+    "El mundo es tuyo",
+    "Desde la periferia",
+    "De Ushuaia al Darién",
+    "Nómade",
+    "Desde abajo"
+  ],
+  "terms_freq": {
+    "Comenzar": 2,
+    "Simulador": 5,
+    "carrera": 44,
+    "temporada": 34,
+    "retiro": 2,
+    "Trofeos": 0,
+    "Estadísticas": 2,
+    "Goles": 1,
+    "Asistencias": 0,
+    "Partidos": 0,
+    "Habilidad": 0
+  },
+  "code_snippets": [
+    "const qt=[\"training_extra\",\"personal_coach\",\"mysterious_substance\",\"honesty_test\",\"indecent_proposal\",\"controversial_post\",\"season_load\",\"position_change\",\"position_competition\",\"unexpected_prospect\",\"club_priority\",\"rival_offer\",\"club_crisis\",\"fan_backlash\",\"return_home\",\"giant_tattoo\",\"tax_trouble\",\"foreign_grandfather\",\"finish_high_school\",\"controversial_statement\",\"triumphant_return\",\"club_national_team_conflict\",\"injury_at_peak\",\"injury\",\"decisive_penalty\"],_i={giant_tattoo:35,finish_high_s",
+    "const v=[];let C=o;const L=n[n.length-1]??null,w=L?.teamId===a.id,S=w?L.trophies.includes(\"league\"):!1,E=w?L.trophies.includes(\"continental_primary\"):!1,A=w?L.trophies.includes(\"continental_secondary\"):!1,O=!!_e(r,h)?.continental_trophies.continental_secondary;let N=!1;for(const[R,j,P]of F){if(R===\"continental_secondary\"&&!O)continue;const T=R===\"continental_secondary\"&&i.clubTrophyOverride?.trophy!==\"continental_secondary\"&&(N||S||E||A),U=T?0:j;if(T)continue;const B=s(C,Math.min(1,U*(P?p:1)));C",
+    "const Ea=[\"king_of_america\",\"one_club_legend\",\"europe_owner\",\"mr_champions\",\"goat\",\"only_pele\",\"black_spider\",\"net_terror\",\"complete_football\",\"most_decorated\",\"ringless\",\"national_hero\",\"the_world_is_yours\",\"from_the_periphery\",\"ushuaia_to_darien\",\"nomad\",\"from_the_bottom\",\"matagigantes\",\"the_treble\",\"baldosero\"],Lr=Ea.map(o=>({code:o,imageSrc:`/career-simulator/achievements/${o}.jpg`}));function ka(o){return Ea.includes(o)}const ks=\"copero:career-achievement-outbox:v2:\",Ss=\"copero:career-achie"
+  ]
+}

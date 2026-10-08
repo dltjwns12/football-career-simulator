@@ -1,0 +1,22 @@
+[
+  {
+    "id": "brasileirao",
+    "name": "Brasileirão",
+    "country": "BRA"
+  },
+  {
+    "id": "por-primeira-liga",
+    "name": "Primeira Liga",
+    "country": "POR"
+  },
+  {
+    "id": "primera-division-croacia",
+    "name": "SuperSport HNL",
+    "country": "CRO"
+  },
+  {
+    "id": "brasileirao-serie-b",
+    "name": "Brasileirão Série B",
+    "country": "BRA"
+  }
+]

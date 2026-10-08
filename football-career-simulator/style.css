@@ -1,0 +1,1111 @@
+/* ==========================================================================
+   축구선수 커리어 시뮬레이터 (COPERO 한글화 에디션) 스타일시트 - 고대비 가독성 강화
+   ========================================================================== */
+
+:root {
+  --bg-main: #0a0d14;
+  --bg-card: #131824;
+  --bg-card-subtle: #1a2232;
+  --bg-card-hover: #222d42;
+  --border-color: #334155;
+  --border-focus: #60a5fa;
+  
+  --text-main: #ffffff;
+  --text-muted: #e2e8f0;
+  --text-dim: #94a3b8;
+  
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --emerald: #10b981;
+  --emerald-hover: #059669;
+  --gold: #fbbf24;
+  --gold-glow: rgba(251, 191, 36, 0.3);
+  --cyan: #38bdf8;
+  --danger: #f87171;
+  --purple: #a855f7;
+
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  --font-num: 'Montserrat', var(--font-sans);
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* 유틸리티 */
+.text-center { text-align: center; }
+.text-muted { color: var(--text-muted); }
+.text-emerald { color: #34d399; font-weight: 700; }
+.text-cyan { color: #38bdf8; font-weight: 700; }
+.text-yellow { color: #fde047; font-weight: 700; }
+.text-gold { color: #fbbf24; font-weight: 800; }
+.text-danger { color: #f87171; }
+.mt-4 { margin-top: 1.5rem; }
+.py-5 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.mr-2 { margin-right: 0.5rem; }
+
+/* 헤더 */
+.app-header {
+  background: rgba(19, 24, 36, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-brand {
+  font-family: var(--font-num);
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.logo-sub {
+  font-size: 0.75rem;
+  color: var(--emerald);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 카드 및 컨테이너 */
+.main-content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.card-header {
+  margin-bottom: 1.75rem;
+}
+
+.card-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.card-desc {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-top: 0.35rem;
+}
+
+/* 버튼 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #10b981;
+  color: #022c22;
+  font-weight: 800;
+}
+.btn-primary:hover {
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+.btn-outline {
+  background: var(--bg-card-subtle);
+  border-color: #475569;
+  color: #ffffff;
+}
+.btn-outline:hover {
+  background: var(--bg-card-hover);
+  border-color: #94a3b8;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #cbd5e1;
+}
+.btn-ghost:hover {
+  background: var(--bg-card-subtle);
+  color: #ffffff;
+}
+
+.btn-danger-outline {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+}
+.btn-danger-outline:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+}
+
+.btn-lg {
+  font-size: 1.1rem;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-lg);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* 배지 (Badges) */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+.badge-primary { background: rgba(59, 130, 246, 0.25); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
+.badge-warning { background: rgba(245, 158, 11, 0.25); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.4); }
+.badge-accent { background: rgba(16, 185, 129, 0.25); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+.badge-gold { background: rgba(245, 158, 11, 0.25); color: #fde047; border: 1px solid #f59e0b; }
+
+/* 폼 컨트롤 */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+.col-half {
+  flex: 1;
+}
+
+.form-control {
+  width: 100%;
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #475569;
+  border-radius: var(--radius-md);
+  padding: 0.8rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+.form-control:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+select.form-control option {
+  background-color: #131824;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+.input-with-presets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.preset-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.preset-btn {
+  background: var(--bg-card-subtle);
+  border: 1px solid #475569;
+  border-radius: var(--radius-sm);
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.preset-btn:hover {
+  background: var(--bg-card-hover);
+  color: #ffffff;
+  border-color: #94a3b8;
+}
+
+/* 포지션 선택기 그리드 */
+.position-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+@media (max-width: 640px) {
+  .position-selector-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.pos-option input {
+  display: none;
+}
+.pos-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.85rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: all var(--transition-fast);
+}
+.pos-tag {
+  font-family: var(--font-num);
+  font-weight: 900;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+}
+
+.pos-box.attacker .pos-tag { background: rgba(239, 68, 68, 0.3); color: #fca5a5; }
+.pos-box.creator .pos-tag { background: rgba(245, 158, 11, 0.3); color: #fde047; }
+.pos-box.support .pos-tag { background: rgba(59, 130, 246, 0.3); color: #93c5fd; }
+.pos-box.defensive .pos-tag { background: rgba(16, 185, 129, 0.3); color: #6ee7b7; }
+.pos-box.goalkeeper .pos-tag { background: rgba(168, 85, 247, 0.3); color: #d8b4fe; }
+
+.pos-option input:checked + .pos-box {
+  background: var(--bg-card-hover);
+  border-color: #10b981;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
+  color: #ffffff;
+}
+
+/* 시뮬레이션 모드 그리드 */
+.mode-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+@media (max-width: 768px) {
+  .mode-selector-grid { grid-template-columns: 1fr; }
+}
+
+.mode-option input { display: none; }
+.mode-card {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  height: 100%;
+}
+.mode-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.mode-sub {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+.mode-option input:checked + .mode-card {
+  border-color: #10b981;
+  background: var(--bg-card-hover);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
+}
+
+/* 2단계: 아카데미 입단 카드 */
+.team-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.team-card {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: #10b981;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.team-logo-area {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+.team-league {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 0.75rem;
+}
+.team-rep-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #fbbf24;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+/* 3단계: 메인 플레이 HUD */
+.player-hud-card {
+  background: var(--bg-card);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hud-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.hud-avatar {
+  width: 62px;
+  height: 62px;
+  background: var(--bg-card-subtle);
+  border: 2px solid #475569;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hud-pos {
+  font-family: var(--font-num);
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: #34d399;
+  line-height: 1;
+}
+.hud-number {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+.hud-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.hud-player-name {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.badge-nation {
+  background: var(--bg-card-subtle);
+  border: 1px solid #475569;
+  color: #f1f5f9;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hud-team-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+.team-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #10b981;
+}
+.hud-team-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+.hud-league-name {
+  color: #cbd5e1;
+}
+.hud-role-badge {
+  background: rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6ee7b7;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.hud-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hud-stat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 0.55rem 0.95rem;
+  min-width: 85px;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  font-weight: 700;
+}
+.stat-value {
+  font-family: var(--font-num);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+.stat-sub {
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.ovr-pill {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(234, 88, 12, 0.15));
+  border-color: #f59e0b;
+}
+.ovr-large {
+  font-family: var(--font-num);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #fbbf24;
+  line-height: 1.1;
+}
+
+/* 시뮬레이션 레이아웃 그리드 */
+.simulation-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 860px) {
+  .simulation-layout-grid { grid-template-columns: 1fr; }
+}
+
+/* 이벤트 패널 */
+.event-header {
+  margin-bottom: 1rem;
+}
+.event-title {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-top: 0.4rem;
+}
+.event-description {
+  font-size: 1.05rem;
+  color: #f1f5f9;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.event-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+.event-option-card {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #475569;
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.35rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: all var(--transition-fast);
+  text-align: left;
+  color: #ffffff;
+}
+.event-option-card:hover {
+  background: var(--bg-card-hover);
+  border-color: #10b981;
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+.option-label {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.option-badge {
+  font-size: 0.85rem;
+  color: #38bdf8;
+  background: #1e293b;
+  border: 1px solid #0284c7;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* 최근 시즌 결과 패널 */
+.recap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.panel-title {
+  color: #ffffff;
+  font-weight: 800;
+}
+.season-tag {
+  font-size: 0.85rem;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.event-result-banner {
+  background: rgba(59, 130, 246, 0.15);
+  border-left: 4px solid #3b82f6;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.season-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.stat-box {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+}
+.box-num {
+  font-family: var(--font-num);
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #ffffff;
+  display: block;
+}
+.box-lbl {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.trophies-won-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.trophy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(245, 158, 11, 0.2);
+  border: 1.5px solid #f59e0b;
+  color: #fde047;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 800;
+  animation: popIn 0.3s ease;
+}
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(168, 85, 247, 0.2);
+  border: 1.5px solid #a855f7;
+  color: #e9d5ff;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.national-recap-banner {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.growth-report {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+/* 역대 커리어 기록 테이블 */
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.career-totals {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+.career-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.career-table th {
+  padding: 0.85rem 0.75rem;
+  color: #f1f5f9;
+  font-weight: 700;
+  background: #182030;
+  border-bottom: 2px solid #334155;
+  white-space: nowrap;
+}
+.career-table td {
+  padding: 0.8rem 0.75rem;
+  border-bottom: 1px solid #273349;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.career-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* 4단계: 은퇴 & 명예의 전당 */
+.retirement-hero {
+  padding: 2.5rem 1rem 1.5rem;
+}
+.retirement-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin-top: 0.6rem;
+}
+.hof-tier-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000000;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.4rem 1.4rem;
+  border-radius: 999px;
+  margin-top: 0.75rem;
+  box-shadow: 0 0 25px var(--gold-glow);
+}
+.hof-desc {
+  font-size: 1.15rem;
+  color: #f1f5f9;
+  max-width: 680px;
+  margin: 1.25rem auto 0;
+  line-height: 1.7;
+}
+
+.hof-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+@media (max-width: 768px) {
+  .hof-showcase-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.hof-stat-card {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.hof-stat-lbl {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 700;
+  display: block;
+}
+.hof-stat-val {
+  font-family: var(--font-num);
+  font-size: 1.45rem;
+  font-weight: 900;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+.trophy-room-title, .journey-title, .ach-summary-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.trophy-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.trophy-room-pill {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 0.65rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.trophy-count-tag {
+  background: rgba(245, 158, 11, 0.25);
+  border: 1px solid #f59e0b;
+  color: #fde047;
+  font-weight: 900;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.journey-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.journey-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card-subtle);
+  border: 1px solid #334155;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+.journey-years {
+  font-family: var(--font-num);
+  color: #cbd5e1;
+  font-weight: 800;
+  min-width: 90px;
+}
+.journey-club {
+  font-weight: 800;
+  color: #ffffff;
+}
+.journey-league {
+  color: #cbd5e1;
+}
+
+.ach-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.85rem;
+}
+.ach-card-item {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+.ach-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.ach-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+.ach-desc {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  margin-top: 0.25rem;
+  line-height: 1.45;
+}
+
+/* 모달 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1.25rem;
+}
+.modal-box {
+  background: #131824;
+  border: 1.5px solid #475569;
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  animation: scaleUp 0.2s ease;
+}
+.modal-lg { max-width: 860px; }
+
+.modal-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.btn-close {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.btn-close:hover { color: #ffffff; }
+
+.transfer-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.transfer-card {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.transfer-fee {
+  font-family: var(--font-num);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #34d399;
+  margin: 0.5rem 0 0.25rem;
+}
+.transfer-wage {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.achievements-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+.ach-modal-card {
+  background: var(--bg-card-subtle);
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: all var(--transition-fast);
+}
+.ach-modal-card.unlocked {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+.ach-modal-card.locked {
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+
+/* 토스트 알림 */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 200;
+}
+.toast {
+  background: #182030;
+  border: 1.5px solid #475569;
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.35rem;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideInRight 0.3s ease;
+}
+.toast-success { border-color: #10b981; }
+.toast-gold { border-color: #f59e0b; }
+
+/* 애니메이션 */
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes scaleUp {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes slideInRight {
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+.fade-in {
+  animation: scaleUp 0.25s ease;
+}
